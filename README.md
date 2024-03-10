@@ -1,9 +1,5 @@
 # STEM ESSAY Readme 🚀
 
-[![standard-readme compliant](https://img.shields.io/badge/readme%20-KAKU-brightgreen.svg?style=flat-square)](https://github.com/YiVal/Kaku/blob/master/README.md)
-
-🔥 Feb 18: STEM ESSAY is first created in [YiVal](https://github.com/YiVal)
-
 🔥 For more in-depth information and resources, please visit our [official website](https://stemessay.com/).
 
 
@@ -26,7 +22,7 @@ Our goal is to help users from students to researchers transform their ideas int
 
 ### Requirements
 
-- Linux
+- Linux or MaxOS
 - Python 3.10+
 - [openai](https://github.com/openai)
 - [pyautogen](https://github.com/microsoft/autogen)
@@ -35,17 +31,17 @@ Our goal is to help users from students to researchers transform their ideas int
 a. Clone the project.
 
 ```shell
-git clone https://github.com/YiVal/Kaku
+git clone https://github.com/Dillettant/Athena
 
-cd Kaku
+cd Athena
 ```
 
 b. Create a conda virtual environment and activate it.
 
 ```shell
-conda create -n kaku python=3.10 -y
+conda create -n athena python=3.10 -y
 
-conda activate kaku
+conda activate athena
 ```
 
 c. Install dependencies.
@@ -163,9 +159,9 @@ The following represents a selection of essay topics that can be generated. If y
 
 | Topic | Notebook Link |
 |-------|---------------|
-| Understanding the Role of Probability Theory and Statistics in Predictive Modeling for Climate Change Scenarios| [![Notebook - Topic 1](https://img.shields.io/badge/Notebook-Topic1-bule.svg?style=flat-square)](https://github.com/YiVal/Kaku/blob/master/src/notebook/essay_topic_1.ipynb) |
-| The Mathematical Exploration of Population Growth: An investigation into different types of mathematical models predicting population growth over time | [![Notebook - Topic 2](https://img.shields.io/badge/Notebook-Topic2-bule.svg?style=flat-square)](https://github.com/YiVal/Kaku/blob/master/src/notebook/essay_topic_2.ipynb) |
-| Predicting Stock Market Trends Using Stochastic Processes and Probability Theory| [![Notebook - Topic 3](https://img.shields.io/badge/Notebook-Topic3-bule.svg?style=flat-square)](https://github.com/YiVal/Kaku/blob/master/src/notebook/essay_topic_3.ipynb) |
+| Understanding the Role of Probability Theory and Statistics in Predictive Modeling for Climate Change Scenarios| [![Notebook - Topic 1](https://img.shields.io/badge/Notebook-Topic1-bule.svg?style=flat-square)](https://github.com/Dillettant/Athena/blob/master/src/notebook/essay_topic_1.ipynb) |
+| The Mathematical Exploration of Population Growth: An investigation into different types of mathematical models predicting population growth over time | [![Notebook - Topic 2](https://img.shields.io/badge/Notebook-Topic2-bule.svg?style=flat-square)](https://github.com/Dillettant/Athena/blob/master/src/notebook/essay_topic_2.ipynb) |
+| Predicting Stock Market Trends Using Stochastic Processes and Probability Theory| [![Notebook - Topic 3](https://img.shields.io/badge/Notebook-Topic3-bule.svg?style=flat-square)](https://github.com/Dillettant/Athena/blob/master/src/notebook/essay_topic_3.ipynb) |
 
 ## Stem Essay Use Case: Modeling of Zombie Apocalypse
 
@@ -185,20 +181,20 @@ Upon initiating a pull request, an automated CLA system will assess if your cont
 ### Contributors
 
 This project exists thanks to all the people who contribute. 
-<a href="https://github.com/YiVal/YiVal/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=YiVal/YiVal" />
+<a href="https://github.com/Dillettant/Athena/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Dillettant/Athena" />
 </a>
 
 ## Contact Us
 
 <p align="center">
-  <a href="https://www.facebook.com/profile.php?id=61555698471344" style="margin-right: 20px;"><img src="https://github.com/YiVal/Kaku/blob/master/social/logo-social-facebook.png" alt="Facebook" style="width: 60px;"/></a>
-  <a href="https://www.instagram.com/stemessay/" style="margin-right: 20px;"><img src="https://github.com/YiVal/Kaku/blob/master/social/logo-social-instagram.png" alt="Instagram" style="width: 60px;"/></a>
-  <a href="https://twitter.com/EssayStem93096" style="margin-right: 20px;"><img src="https://github.com/YiVal/Kaku/blob/master/social/logo-social-twitter.png" alt="Twitter" style="width: 60px;"/></a>
-  <a href="https://github.com/YiVal/Kaku" style="margin-right: 20px;"><img src="https://github.com/YiVal/Kaku/blob/master/social/logo-social-github.png" alt="Github" style="width: 60px;"/></a>
-  <a href="https://www.youtube.com/@KaKoolove"><img src="https://github.com/YiVal/Kaku/blob/master/social/logo-social-youtube.png" alt="Youtube" style="width: 60px;"/></a>
-  <a href="https://weibo.com/7893235440/O1QmBoq9Q" style="margin-right: 20px;"><img src="https://github.com/YiVal/Kaku/blob/master/social/logo-social-weibo.png" alt="Weibo" style="width: 60px;"/></a>
-  <a href="https://www.xiaohongshu.com/user/profile/652d33220000000002013ef6" style="margin-right: 20px;"><img src="https://github.com/YiVal/Kaku/blob/master/social/logo-social-xiaohongshu.png" alt="Xiaohongshu" style="width: 60px;"/></a>
+  <a href="https://www.facebook.com/profile.php?id=61555698471344" style="margin-right: 20px;"><img src="https://github.com/Dillettant/Athena/blob/master/social/logo-social-facebook.png" alt="Facebook" style="width: 60px;"/></a>
+  <a href="https://www.instagram.com/stemessay/" style="margin-right: 20px;"><img src="https://github.com/Dillettant/Athena/blob/master/social/logo-social-instagram.png" alt="Instagram" style="width: 60px;"/></a>
+  <a href="https://twitter.com/EssayStem93096" style="margin-right: 20px;"><img src="https://github.com/Dillettant/Athena/blob/master/social/logo-social-twitter.png" alt="Twitter" style="width: 60px;"/></a>
+  <a href="https://github.com/Dillettant/Athena" style="margin-right: 20px;"><img src="https://github.com/Dillettant/Athena/blob/master/social/logo-social-github.png" alt="Github" style="width: 60px;"/></a>
+  <a href="https://www.youtube.com/@KaKoolove"><img src="https://github.com/Dillettant/Athena/blob/master/social/logo-social-youtube.png" alt="Youtube" style="width: 60px;"/></a>
+  <a href="https://weibo.com/7893235440/O1QmBoq9Q" style="margin-right: 20px;"><img src="https://github.com/Dillettant/Athena/blob/master/social/logo-social-weibo.png" alt="Weibo" style="width: 60px;"/></a>
+  <a href="https://www.xiaohongshu.com/user/profile/652d33220000000002013ef6" style="margin-right: 20px;"><img src="https://github.com/Dillettant/Athena/blob/master/social/logo-social-xiaohongshu.png" alt="Xiaohongshu" style="width: 60px;"/></a>
 </p>
 
 
