@@ -165,9 +165,7 @@ The following represents a selection of essay topics that can be generated. If y
 
 ## Stem Essay Use Case: Modeling of Zombie Apocalypse
 
-<video width="320" height="240" controls>
-  <source src="https://stemessay.com/static/media/Kakuvideo.13699548c9584fbb93ff.mp4" type="video/mp4">
-</video>
+[Demo](https://stemessay.com/static/media/Kakuvideo.13699548c9584fbb93ff.mp4)
 
 ## Contributing
 
