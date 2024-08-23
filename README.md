@@ -172,7 +172,7 @@ The following represents a selection of essay topics that can be generated. If y
 
 This project is open to contributions and ideas. To contribute, you'll need to accept a Contributor License Agreement (CLA), which confirms your authority to offer your contribution and grants us the permission to utilize it.
 
-Upon initiating a pull request, an automated CLA system will assess if your contribution requires a CLA and update the pull request with the necessary information (such as a status check or a comment). Just follow the steps outlined by the automated system. This process is a one-time requirement for all contributions across repositories that employ our CLA.
+Upon initiating a pull request, an automated CLA system will assess if your contribution requires a CLA and update the pull request with the necessary information (such as a status check or a comment). Just follow the steps outlined by the automated system. This process is a one-time requirement for all contributions across repositories that employ our CLA. 
 
 ### Contributors
 
