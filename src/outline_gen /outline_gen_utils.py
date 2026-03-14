@@ -2,8 +2,16 @@ import re
 import os
 from collections import defaultdict
 from autogen import UserProxyAgent, AssistantAgent, GroupChat, GroupChatManager
+import agentops
+from dotenv import load_dotenv
 
+# Load environment variables
+load_dotenv()
 
+# Initialize AgentOps
+agentops.init(os.getenv('AGENTOPS_API_KEY'))
+
+@agentops.record_function('generate_chat')
 def generate_chat(topic):
     """
     Generate a chat between a subject expert and a critic to create an IB essay plan.
@@ -86,7 +94,7 @@ def generate_chat(topic):
 
     critic_system_prompt = """
     Your role involves a thorough examination of the IB essay plan developed by a
-    subject expert. Your feedback is essential in enhancing the plan’s academic
+    subject expert. Your feedback is essential in enhancing the plan's academic
     strength, ensuring relevance to the essay's title, and maintaining a logical
     structure. Focus on the following key areas:
 
@@ -134,9 +142,9 @@ def generate_chat(topic):
     manager = GroupChatManager(groupchat=groupchat, llm_config={"config_list": config_list})
     subject_expert_admin1.initiate_chat(manager, message=f"Write an IB essay {topic} with 4000 words.")
     
-    # print(f"[DEBUG] Chat messages: {subject_expert_admin1.chat_messages}, type: {type(subject_expert_admin1.chat_messages)}")
     return subject_expert_admin1.chat_messages
 
+@agentops.record_function('extract_latest_plan')
 def extract_latest_plan(chat_messages):
     """
     Extract the latest essay plan from the chat messages.
@@ -151,6 +159,7 @@ def extract_latest_plan(chat_messages):
                     return message['content'][start_index:end_index].strip()
     return None
 
+@agentops.record_function('parse_document_to_dict')
 def parse_document_to_dict(text):
     """
     Parse the document into a dictionary.
@@ -175,6 +184,7 @@ def parse_document_to_dict(text):
         print(f"Error while extracting section: {e}")
     return res
 
+@agentops.record_function('generate_plan_dict')
 def generate_plan_dict(topic):
     """
     Generate an IB essay plan dictionary for a given topic.
@@ -185,7 +195,7 @@ def generate_plan_dict(topic):
     latest_plan_dict = parse_document_to_dict(latest_plan)
     return latest_plan,latest_plan_dict
 
-
+@agentops.record_function('extract_subsubsection')
 def extract_subsubsection(current_res, idx, lines, parent_number, pp_number):
     while idx[0] < len(lines) and lines[idx[0]].strip() == '':
         idx[0] += 1
@@ -207,6 +217,7 @@ def extract_subsubsection(current_res, idx, lines, parent_number, pp_number):
 
         current_res[pp_number]['sub_section'][parent_number]['content'].append(content)
 
+@agentops.record_function('extract_subsection')
 def extract_subsection(current_res, idx, lines, parent_number):
     while idx[0] < len(lines) and lines[idx[0]] == '':
         idx[0] += 1
@@ -259,6 +270,7 @@ def extract_subsection(current_res, idx, lines, parent_number):
         while idx[0] < len(lines) and '3.3' not in lines[idx[0]] and '4.' not in lines[idx[0]]:
             extract_subsubsection(current_res, idx, lines, number, parent_number)
 
+@agentops.record_function('extract_section')
 def extract_section(current_res, idx, lines):
     while idx[0] < len(lines) and lines[idx[0]] == '':
         idx[0] += 1
@@ -282,7 +294,7 @@ def extract_section(current_res, idx, lines):
         current_res[number] = {
             'title': content,
             'sub_section': {}
-        }
+            }
 
     idx[0] += 1
     if not has_sub_section:
@@ -302,6 +314,7 @@ def extract_section(current_res, idx, lines):
                 break
             first_non_whitespace = next((char for char in lines[idx[0]] if not char.isspace()), None)
 
+@agentops.record_function('parse_document_to_dict')
 def parse_document_to_dict(text):
     lines = text.split('\n')
     idx = 0
@@ -322,8 +335,12 @@ def parse_document_to_dict(text):
             raise Exception("Error while extracting section: {}".format(e))
     return res
 
+@agentops.record_function('test_generate_outline')
 def test_generate_outline(topic):
     chat_messages = generate_chat(topic)
     latest_plan = extract_latest_plan(chat_messages)
     latest_plan_dict = parse_document_to_dict(latest_plan)
-    return latest_plan,latest_plan_dict
+    return latest_plan, latest_plan_dict
+
+# End of program
+agentops.end_session('Success')
