@@ -25,7 +25,7 @@ Our goal is to help users from students to researchers transform their ideas int
 - Linux or MaxOS
 - Python 3.10+
 - [openai](https://github.com/openai)
-- [pyautogen](https://github.com/microsoft/autogen)
+- [ag2](https://github.com/microsoft/autogen)
 
 
 a. Clone the project.

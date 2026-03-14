@@ -867,7 +867,7 @@
             "index": "pypi",
             "version": "==0.2.2"
         },
-        "pyautogen": {
+        "ag2": {
             "hashes": [
                 "sha256:85bfa233fefe7cd20e81b432ef76173d06632d754ef2f481b1c903fffb74de1b",
                 "sha256:d229a562412ea9a72c2af7338b0842f229bbca426b17111f0c17ea4366a20b1f"
